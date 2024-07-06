@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+@author	 Mariani Francesco Paolo - http://kiliken.altervista.org/
+@version	1.1a
+-->
+
+<NotepadPlus>
+   <AutoComplete language="HeliScript">
+       <Environment ignoreCase="no" startFunc="(" stopFunc=")" paramSeparator="," terminal=";" additionalWordChar = "."/>
+       <!-- Types -->
+	   <KeyWord name="component"/>
+	   <KeyWord name="new"/>
+	   <KeyWord name="void"/>
+	   <KeyWord name="int"/>
+	   <KeyWord name="float"/>
+	   <KeyWord name="bool"/>
+	   <KeyWord name="string"/>
+	   <KeyWord name="class"/>
+	   <KeyWord name="public"/>
+	   <KeyWord name="private"/>
+	   <KeyWord name="const"/>
+	   <KeyWord name="return"/>
+	   <KeyWord name="if"/>
+	   <KeyWord name="else"/>
+	   <KeyWord name="while"/>
+	   <KeyWord name="do"/>
+	   <KeyWord name="for"/>
+	   <KeyWord name="switch"/>
+	   <KeyWord name="case"/>
+	   <KeyWord name="break"/>
+	   <KeyWord name="continue"/>
+	   
+	   <!-- Classes -->
+	   <KeyWord name="Vector3" func="no">
+			<Overload descr="public float x, y, z"/>
+	   </KeyWord>
+	   <KeyWord name="Quaternion" func="no">
+			<Overload descr="public float x, y, z, w"/>
+	   </KeyWord>
+	   <KeyWord name="Matrix" func="no">
+			<Overload descr="public list<float> m"/>
+	   </KeyWord>
+	   <KeyWord name="Item"/>
+	   <KeyWord name="Player"/>	
+	   
+	   <!-- String Methods -->
+	   <KeyWord name="ToInt" func="yes">
+           <Overload retVal="int" descr=""/>
+       </KeyWord>
+	   <KeyWord name="Length" func="yes">
+           <Overload retVal="int" descr=""/>
+       </KeyWord>
+	   <KeyWord name="LengthByte" func="yes">
+           <Overload retVal="int" descr=""/>
+       </KeyWord>
+	   <KeyWord name="IsEmpty" func="yes">
+           <Overload retVal="bool" descr=""/>
+       </KeyWord>
+	   <KeyWord name="IndexOf" func="yes">
+           <Overload retVal="int" descr="">
+               <Param name="string value" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SubString" func="yes">
+           <Overload retVal="string" descr="">
+               <Param name="int startIndex, int length" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Append" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="int value" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="RemoveLast" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="RemoveAt" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="int index" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Callback Function-->
+	   <KeyWord name="update"/>
+	   <KeyWord name="OnLoaded" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnWindowActivate" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="bool IsActivate" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnBeforeUnload" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnUnload" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnClickNode" func="yes">
+           <Overload retVal="bool" descr="">
+				<Param name="int NodeIndex" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnClickEmpty" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnEnterAreaCollider" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnLeaveAreaCollider" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnUnselectNode" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="int NodeIndex" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnUnselectAvatar" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string Name" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnResize" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="int width, int height" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnReceiveCustomState" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string id, string type, string data" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnReceiveCustomData" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string id, string type, string data" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnClickedButton" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string layerName, string buttonname" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnEnterViewCollider" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string NodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnLeaveViewCollider" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string NodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnReceiveTextChat" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string ID, string PlayerName, string Text" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnClickedAvatar" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string PlayerID" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnPlayVideo" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnPauseVideo" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnResumeVideo" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnStopVideo" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="OnChangedProperty" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string Key, string Value" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- System Functions -->
+	   <KeyWord name="hsSystemOutput" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="string text" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsSystemWriteLine" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="string text" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsSystemIsDebugMode" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsIsMobile" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsSystemGetTime" func="yes">
+           <Overload retVal="int" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsSystemGetDeltaTime" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetDate" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="ref int time" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetDateLocal" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="ref int time" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetDateUTC" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="ref int time" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetEpochSeconds" func="yes">
+           <Overload retVal="int" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetTimezoneOffset" func="yes">
+           <Overload retVal="int" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetCurrentWorldId" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsWebOpen" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="string url" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsGetLang" func="yes">
+           <Overload retVal="string" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsIsLangJA" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsIsLangEN" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Math Function -->
+	   <KeyWord name="hsMathCos" func="yes">
+           <Overload retVal="float" descr="">
+				<Param name="float radian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsMathSin" func="yes">
+           <Overload retVal="float" descr="">
+				<Param name="float radian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsMathTan" func="yes">
+           <Overload retVal="float" descr="">
+				<Param name="float radian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsMathAtan2" func="yes">
+           <Overload retVal="float" descr="">
+				<Param name="float y, float x" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsMathSqrt" func="yes">
+           <Overload retVal="float" descr="">
+				<Param name="float f" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsMathRandom" func="yes">
+           <Overload retVal="int" descr="">
+				<Param name="int n" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Vector3 Function -->
+	   <KeyWord name="makeVector3" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="float x, float y, float z" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeVector3Dot" func="yes">
+           <Overload retVal="float" descr="">
+               <Param name="Vector3 vec1, Vector3 vec2" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeVector3Cross" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="Vector3 vec1, Vector3 vec2" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="lerpVector3" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="Vector3 from, Vector3 to, float t" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Vector3 Methods -->
+	   <KeyWord name="Add" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="Vector3 v" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Sub" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="Vector3 v" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Rotate" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="Quaternion q" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="RotateMatrix" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="Matrix mat" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Distance" func="yes">
+           <Overload retVal="float" descr="">
+               <Param name="Vector3 v" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetNormalize" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Quaternion Function -->
+	   <KeyWord name="makeQuaternion" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="float x, float y, float z, float w" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionMul" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="Quaternion a, Quaternion b" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionXRotation" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="float rotateRadian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionYRotation" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="float rotateRadian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionZRotation" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="float rotateRadian" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionEuler" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="float x, float y, float z" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionFromTo" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="Vector3 From, Vector3 To" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="makeQuaternionLook" func="yes">
+           <Overload retVal="Quaternion" descr="">
+				<Param name="Vector3 LookView, Vector3 Up" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Quaternion Methods -->
+	   <KeyWord name="GetMatrix" func="yes">
+           <Overload retVal="Matrix" descr="">
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Item Function -->
+	   <KeyWord name="hsItemGet" func="yes">
+           <Overload retVal="Item" descr="">
+				<Param name="string itemName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsItemGetSelf" func="yes">
+           <Overload retVal="Item" descr="">
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Item Methods -->
+	   <KeyWord name="Equals" func="yes">
+           <Overload retVal="bool" descr="">
+				<Param name="Item obj" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetName" func="yes">
+           <Overload retVal="string" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetPos" func="yes">
+           <Overload retVal="void" descr="">
+				<Param name="Vector3 pos" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetPos" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetWorldPos" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetQuaternion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="Quaternion Rotate" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetQuaternion" func="yes">
+           <Overload retVal="Quaternion" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetWorldQuaternion" func="yes">
+           <Overload retVal="Quaternion" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetWorldRotate" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetScale" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetScale" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="Vector3 Scale" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="MovePos" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="Vector3 pos, float time, bool CollisionDetection" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsMoving" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Play" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Stop" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsPlay" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Restart" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetPlayTime" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="float PlayTimeMS" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetPlayTime" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetShow" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="bool flag" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsShow" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ChangeMotion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string MotionName, float BlendTimeMS" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="LoadMotion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string MotionName, string FileName, bool Loop" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="FacialEmoteFixed" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="int FacialEmoteType" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Load" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Unload" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsLoading" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsLoaded" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetNodeIndexByName" func="yes">
+           <Overload retVal="int" descr="">
+               <Param name="string nodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetNodeNameByIndex" func="yes">
+           <Overload retVal="string" descr="">
+               <Param name="int nodeIndex" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetNodePosByIndex" func="yes">
+           <Overload retVal="Vector3" descr="">
+               <Param name="int nodeIndex" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetShowNode" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName, bool flag" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsShowNode" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetRotateNode" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName, Vector3 rotate" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetEnableCollider" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName, bool flag" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsEnableCollider" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetClickableNode" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName, bool flag" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsClickableNode" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string nodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetUVOffset" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string materialName, float u, float v" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="PlayVideo" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="string materialName, string url, bool loop" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="StopVideo" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsPlayVideo" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ClearTextPlane" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="WriteTextPlane" func="yes">
+           <Overload retVal="int" descr="">
+               <Param name="string text" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetCamera" func="yes">
+           <Overload retVal="bool" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ResetCamera" func="yes">
+           <Overload retVal="void" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ReplaceItem" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string URL" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ReplaceTexture" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string MaterialName, string URL" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetPhysicsEnable" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string NodeName, bool Flag" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="IsPhysicsFixed" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string NodeName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetProperty" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string Key, string Value" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetProperty" func="yes">
+           <Overload retVal="string" descr="">
+               <Param name="string Key" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="CallComponentMethod" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="string ComponentName, string MethodName, string Params" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetOverridesProperty" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string Key, string Value, string ItemName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetOverridesProperty" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string Key, ref string Value, ref string ItemName" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Player Function -->
+	   <KeyWord name="hsPlayerGet" func="yes">
+           <Overload retVal="Player" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="hsPlayerGetByID" func="yes">
+           <Overload retVal="Player" descr="">
+               <Param name="string PlayerID" />
+           </Overload>
+       </KeyWord>
+	   
+	   <!-- Player Methods -->
+	   <KeyWord name="GetID" func="yes">
+           <Overload retVal="string" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetHeadHeight" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetCustomState" func="yes">
+           <Overload retVal="string" descr="">
+               <Param name="string CustomStateName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetPos" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="Vector3 pos" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetPos" func="yes">
+           <Overload retVal="Vector3" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetRotate" func="yes">
+           <Overload retVal="void" descr="">
+               <Param name="float angle" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetRotate" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetName" func="yes">
+           <Overload retVal="string" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetPhysicsID" func="yes">
+           <Overload retVal="int" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="Emote" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="int EmoteIndex" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetEmotion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="int Index, string FileName, bool Loop, string ActionList" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ChangeMotion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string MotionName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetNextMotion" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string MotionName" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="ShowChatBalloon" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="string Text" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetMoveSpeed" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="float MoveSpeed" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetMoveSpeed" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="SetMoveSpeedupRatio" func="yes">
+           <Overload retVal="bool" descr="">
+               <Param name="float MoveSpeedupRatio" />
+           </Overload>
+       </KeyWord>
+	   <KeyWord name="GetMoveSpeedupRatio" func="yes">
+           <Overload retVal="float" descr="">
+           </Overload>
+       </KeyWord>
+	   
+	   <!--
+	   Prefab
+	   <KeyWord name="fpm" func="yes">
+           <Overload retVal="int" descr="">
+               <Param name="intfogg" />
+           </Overload>
+       </KeyWord> 
+	   -->
+   </AutoComplete>
+</NotepadPlus>

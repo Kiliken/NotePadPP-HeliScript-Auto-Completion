@@ -1,0 +1,64 @@
+<NotepadPlus>
+    <UserLang name="Heliscript" ext="hs" udlVersion="2.1">
+        <Settings>
+            <Global caseIgnored="yes" allowFoldOfComments="yes" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
+        </Settings>
+        <KeywordLists>
+            <Keywords name="Comments">00// 01 02! 03/* 04*/</Keywords>
+            <Keywords name="Numbers, prefix1"></Keywords>
+            <Keywords name="Numbers, prefix2"></Keywords>
+            <Keywords name="Numbers, extras1"></Keywords>
+            <Keywords name="Numbers, extras2"></Keywords>
+            <Keywords name="Numbers, suffix1">f</Keywords>
+            <Keywords name="Numbers, suffix2"></Keywords>
+            <Keywords name="Numbers, range"></Keywords>
+            <Keywords name="Operators1">= ; + / * - , ! &amp;&amp; || . ( ) % &gt; &lt; [ ] ?</Keywords>
+            <Keywords name="Operators2"></Keywords>
+            <Keywords name="Folders in code1, open">{</Keywords>
+            <Keywords name="Folders in code1, middle"></Keywords>
+            <Keywords name="Folders in code1, close">}</Keywords>
+            <Keywords name="Folders in code2, open"></Keywords>
+            <Keywords name="Folders in code2, middle"></Keywords>
+            <Keywords name="Folders in code2, close"></Keywords>
+            <Keywords name="Folders in comment, open"></Keywords>
+            <Keywords name="Folders in comment, middle"></Keywords>
+            <Keywords name="Folders in comment, close"></Keywords>
+            <Keywords name="Keywords1">component&#x000D;&#x000A;new&#x000D;&#x000A;public&#x000D;&#x000A;private&#x000D;&#x000A;const&#x000D;&#x000A;return&#x000D;&#x000A;using&#x000D;&#x000A;if&#x000D;&#x000A;else&#x000D;&#x000A;elseif&#x000D;&#x000A;while&#x000D;&#x000A;do&#x000D;&#x000A;for&#x000D;&#x000A;switch&#x000D;&#x000A;case&#x000D;&#x000A;break&#x000D;&#x000A;continue&#x000D;&#x000A;true&#x000D;&#x000A;false</Keywords>
+            <Keywords name="Keywords2">&#x000D;&#x000A;int&#x000D;&#x000A;float&#x000D;&#x000A;bool&#x000D;&#x000A;string&#x000D;&#x000A;class&#x000D;&#x000A;void</Keywords>
+            <Keywords name="Keywords3">Item&#x000D;&#x000A;Player&#x000D;&#x000A;Vector3&#x000D;&#x000A;Quaternion&#x000D;&#x000A;Matrix</Keywords>
+            <Keywords name="Keywords4">OnLoaded&#x000D;&#x000A;OnWindowActivate&#x000D;&#x000A;OnBeforeUnload&#x000D;&#x000A;OnUnload&#x000D;&#x000A;OnClickNode&#x000D;&#x000A;OnClickEmpty&#x000D;&#x000A;OnEnterAreaCollider&#x000D;&#x000A;OnLeaveAreaCollider&#x000D;&#x000A;OnUnselectNode&#x000D;&#x000A;OnUnselectAvatar&#x000D;&#x000A;OnResize&#x000D;&#x000A;OnReceiveCustomState&#x000D;&#x000A;OnReceiveCustomData&#x000D;&#x000A;OnClickedButton&#x000D;&#x000A;OnEnterViewCollider&#x000D;&#x000A;OnLeaveViewCollider&#x000D;&#x000A;OnReceiveTextChat&#x000D;&#x000A;OnClickedAvatar&#x000D;&#x000A;OnPlayVideo&#x000D;&#x000A;OnPauseVideo&#x000D;&#x000A;OnResumeVideo&#x000D;&#x000A;OnStopVideo&#x000D;&#x000A;OnChangedProperty&#x000D;&#x000A;update</Keywords>
+            <Keywords name="Keywords5">hsSystemOutput&#x000D;&#x000A;hsSystemWriteLine&#x000D;&#x000A;hsSystemIsDebugMode&#x000D;&#x000A;hsIsMobile&#x000D;&#x000A;hsSystemGetTime&#x000D;&#x000A;hsSystemGetDeltaTime&#x000D;&#x000A;hsGetDate&#x000D;&#x000A;hsGetDateLocal&#x000D;&#x000A;hsGetDateUTC&#x000D;&#x000A;hsGetEpochSeconds&#x000D;&#x000A;hsGetTimezoneOffset&#x000D;&#x000A;hsGetCurrentWorldId&#x000D;&#x000A;hsWebOpen&#x000D;&#x000A;hsGetLang&#x000D;&#x000A;hsIsLangEN&#x000D;&#x000A;hsIsLangJA&#x000D;&#x000A;hsMathCos&#x000D;&#x000A;hsMathSin&#x000D;&#x000A;hsMathTan&#x000D;&#x000A;hsMathAtan2&#x000D;&#x000A;hsMathSqrt&#x000D;&#x000A;hsMathRandom&#x000D;&#x000A;makeVector3&#x000D;&#x000A;makeVector3Dot&#x000D;&#x000A;makeVector3Cross&#x000D;&#x000A;lerpVector3&#x000D;&#x000A;makeQuaternion&#x000D;&#x000A;makeQuaternionMul&#x000D;&#x000A;makeQuaternionXRotation&#x000D;&#x000A;makeQuaternionYRotation&#x000D;&#x000A;makeQuaternionZRotation&#x000D;&#x000A;makeQuaternionEuler&#x000D;&#x000A;makeQuaternionFromTo&#x000D;&#x000A;makeQuaternionLook&#x000D;&#x000A;hsItemGet&#x000D;&#x000A;hsItemGetSelf&#x000D;&#x000A;hsPlayerGet&#x000D;&#x000A;hsPlayerGetByID</Keywords>
+            <Keywords name="Keywords6"></Keywords>
+            <Keywords name="Keywords7"></Keywords>
+            <Keywords name="Keywords8"></Keywords>
+            <Keywords name="Delimiters">00&quot; 01 02&quot; 03&apos; 04 05&apos; 06` 07 08` 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23</Keywords>
+        </KeywordLists>
+        <Styles>
+            <WordsStyle name="DEFAULT" fgColor="FFFFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="COMMENTS" fgColor="808080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="LINE COMMENTS" fgColor="808080" bgColor="FFFFFF" colorStyle="1" fontStyle="2" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="8080FF" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="00FFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS2" fgColor="FF0080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS3" fgColor="80FF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="FF8040" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS5" fgColor="FF8040" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS6" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS8" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="OPERATORS" fgColor="FF0080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE1" fgColor="FF0080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN CODE2" fgColor="FF0080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="FOLDER IN COMMENT" fgColor="808080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="FFFF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="FFFF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="FFFF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS6" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS7" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS8" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+        </Styles>
+    </UserLang>
+</NotepadPlus>
