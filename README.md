@@ -1,9 +1,9 @@
 # NotePadPP HeliScript Auto-Completion
 
 ## Introduction
-This is **a NotePad++** implementation that helps you 
+This is **a NotePad++** tool that helps you 
 write **HeliScript** scripts in an easier and faster way.
-Yet this implementation shows only function add some of the Class
+Yet this tool shows only function add some of the Class
 without description, for more information visit the official manual
 of **[VketCloudSDK](https://vrhikky.github.io/VketCloudSDK_Documents/latest/en/hs/hs_overview.html)**.
 
@@ -28,5 +28,5 @@ Follow these easy steps:
 > Ensure that your file extension is .hs for **HeliScript**.
 
 > [!WARNING]
-> The implementation is designed to work better with **"Monokai"** style.
+> The tool is designed to work better with **"Monokai"** style.
 
