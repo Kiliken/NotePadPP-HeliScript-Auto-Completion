@@ -38,7 +38,7 @@
             <WordsStyle name="DEFAULT" fgColor="FFFFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
             <WordsStyle name="COMMENTS" fgColor="808080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
             <WordsStyle name="LINE COMMENTS" fgColor="808080" bgColor="FFFFFF" colorStyle="1" fontStyle="2" nesting="0" />
-            <WordsStyle name="NUMBERS" fgColor="8080FF" bgColor="FFFFFF" fontStyle="0" nesting="0" />
+            <WordsStyle name="NUMBERS" fgColor="8080FF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS1" fgColor="00FFFF" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="FF0080" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS3" fgColor="80FF80" bgColor="FFFFFF" colorStyle="1" fontStyle="0" nesting="0" />
